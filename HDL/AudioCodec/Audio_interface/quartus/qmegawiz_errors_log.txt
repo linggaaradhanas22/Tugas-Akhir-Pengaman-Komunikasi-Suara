@@ -1,0 +1,21 @@
+
+
+C:/Source Code TA/HDL/AudioCodec/Audio_interface/quartus/AudioPLL.vhd
+
+Dec 25 02PM:50:05>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Source Code TA/HDL/AudioCodec/Audio_interface/quartus/AudioPLL.vhd
+
+Dec 25 02PM:50:09>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Source Code TA/HDL/AudioCodec/Audio_interface/quartus/AudioPLL.vhd
+
+Dec 25 02PM:50:15>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Source Code TA/HDL/AudioCodec/Audio_interface/quartus/AudioPLL.vhd
+
+Dec 25 02PM:50:20>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

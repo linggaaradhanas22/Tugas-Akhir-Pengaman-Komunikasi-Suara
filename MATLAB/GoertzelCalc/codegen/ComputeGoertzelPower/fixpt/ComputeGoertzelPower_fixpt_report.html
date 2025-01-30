@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for ComputeGoertzelPower_fixpt, GoertzelCalc_fixpt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+</style>
+</head>
+<body>
+<h3>Generated on  2025-01-11 20:02:25</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>ComputeGoertzelPower_fixpt<span></h2>
+<pre>function [power, Q1_squared, Q2_squared, Q1_squared_plus_Q2_squared, coeff_Q1, coeff_Q1_Q2] = ComputeGoertzelPower_fixpt(Q1, Q2, coeff)
+% ComputeGoertzelPower - Calculates the power of a frequency component using Goertzel algorithm
+%
+% This function computes the power of a specific frequency component using the
+% Goertzel algorithm's state variables (Q1, Q2) and the filter coefficient.
+%
+% Inputs:
+%   Q1    : First delay state variable from Goertzel filter
+%   Q2    : Second delay state variable from Goertzel filter
+%   coeff : Goertzel filter coefficient for the target frequency
+%
+% Output:
+%   power : Power of the frequency component
+%
+% The power is computed using the formula:
+%   power = Q1^2 + Q2^2 - coeff*Q1*Q2
+
+    % Initialize power computation variables
+    fm = get_fimath();
+
+    Q1_squared = fi(0, 0, 16, -7, fm);        % Store Q1^2
+    Q2_squared = fi(0, 0, 16, -7, fm);        % Store Q2^2
+    coeff_Q1 = fi(0, 1, 16, 2, fm);         % Store coefficient * Q1
+    coeff_Q1_Q2 = fi(0, 0, 16, -8, fm);      % Store coefficient * Q1 * Q2
+    power = fi(0, 0, 16, -1, fm);            % Final power value
+    
+    % Step 1: Compute squares of state variables
+    Q1_squared(:) = Q1^2;    % Square of first state variable
+    Q2_squared(:) = Q2^2;    % Square of second state variable
+    
+    % Step 2: Sum the squared terms
+    Q1_squared_plus_Q2_squared = fi(Q1_squared + Q2_squared, 0, 16, -8, fm);
+    
+    % Step 3: Compute the cross-term components
+    coeff_Q1(:) = coeff * Q1;            % Multiply coefficient with Q1
+    coeff_Q1_Q2(:) = coeff_Q1 * Q2;      % Complete the cross-term multiplication
+    
+    % Step 4: Calculate final power
+    % Power = (Q1^2 + Q2^2) - coeff*Q1*Q2
+    power(:) = Q1_squared_plus_Q2_squared - coeff_Q1_Q2;
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">Q1</TD><TD class="left">numerictype(1, 16, 3)</TD><TD class="right">-2229.25</TD><TD class="right">426</TD></TR>
+<TR class="b">
+<TD class="left">Q1_squared</TD><TD class="left">numerictype(0, 16, -7)</TD><TD class="right">0</TD><TD class="right">4969600</TD></TR>
+<TR class="a">
+<TD class="left">Q1_squared_plus_Q2_squared</TD><TD class="left">numerictype(0, 16, -8)</TD><TD class="right">1536</TD><TD class="right">9416448</TD></TR>
+<TR class="b">
+<TD class="left">Q2</TD><TD class="left">numerictype(1, 16, 3)</TD><TD class="right">-2108.75</TD><TD class="right">562.25</TD></TR>
+<TR class="a">
+<TD class="left">Q2_squared</TD><TD class="left">numerictype(0, 16, -7)</TD><TD class="right">0</TD><TD class="right">4446848</TD></TR>
+<TR class="b">
+<TD class="left">coeff</TD><TD class="left">numerictype(0, 16, 15)</TD><TD class="right">1.91387939453125</TD><TD class="right">1.98114013671875</TD></TR>
+<TR class="a">
+<TD class="left">coeff_Q1</TD><TD class="left">numerictype(1, 16, 2)</TD><TD class="right">-4416.5</TD><TD class="right">841.5</TD></TR>
+<TR class="b">
+<TD class="left">coeff_Q1_Q2</TD><TD class="left">numerictype(0, 16, -8)</TD><TD class="right">0</TD><TD class="right">9313280</TD></TR>
+<TR class="a">
+<TD class="left">power</TD><TD class="left">numerictype(0, 16, -1)</TD><TD class="right">0</TD><TD class="right">103168</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>GoertzelCalc_fixpt<span></h2>
+<pre>function [coeff_Q1, x_min_Q2, Q0, Q1, Q2] = GoertzelCalc_fixpt(x, coeff)
+    % GoertzelFilter - Applies the Goertzel algorithm to a signal x
+    % Inputs:
+    %   x     : Input signal (ADC samples)
+    %   coeff : Goertzel filter coefficient
+    % Output:
+    %   Q0    : Goertzel output 
+    %   Q1    : Delayed version of Q0
+    %   Q2    : Delayed version of Q2
+
+    fm = get_fimath();
+
+    N = fi(length(x), 0, 10, 0, fm); % Get the number of samples
+    
+    % Initialize the state variables Q0, Q1, and Q2
+    Q0 = fi(0, 1, 16, 3, fm);
+    Q1 = fi(0, 1, 16, 3, fm);
+    Q2 = fi(0, 1, 16, 3, fm);
+    coeff_Q1 = fi(0, 1, 16, 2, fm);
+    x_min_Q2 = fi(0, 1, 16, 3, fm);
+
+
+    % Loop through the input signal x
+    for n = fi(1, 0, 1, 0, fm):N        
+        % Update the state variables
+        Q2 (:) = Q1;
+        Q1 (:) = Q0;
+        
+        % Compute multiplication of coeff and Q1
+        coeff_Q1 (:) = coeff * Q1;
+
+        % Compute substraction between x and Q2
+        x_min_Q2 (:) = x(n) - Q2; 
+        
+        % Compute Q0 based on the Goertzel algorithm equation
+        Q0 (:) = coeff_Q1 + x_min_Q2;
+
+
+    end
+end</pre><TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th></TR><TR class="a">
+<TD class="left">N</TD><TD class="left">numerictype(0, 10, 0)</TD><TD class="right">1</TD><TD class="right">640</TD></TR>
+<TR class="b">
+<TD class="left">Q0</TD><TD class="left">numerictype(1, 16, 3)</TD><TD class="right">-2307.5</TD><TD class="right">2210.5</TD></TR>
+<TR class="a">
+<TD class="left">Q1</TD><TD class="left">numerictype(1, 16, 3)</TD><TD class="right">-2229.25</TD><TD class="right">2210.5</TD></TR>
+<TR class="b">
+<TD class="left">Q2</TD><TD class="left">numerictype(1, 16, 3)</TD><TD class="right">-2155</TD><TD class="right">2210.5</TD></TR>
+<TR class="a">
+<TD class="left">coeff</TD><TD class="left">numerictype(0, 16, 15)</TD><TD class="right">1.91387939453125</TD><TD class="right">1.98114013671875</TD></TR>
+<TR class="b">
+<TD class="left">coeff_Q1</TD><TD class="left">numerictype(1, 16, 2)</TD><TD class="right">-4416.5</TD><TD class="right">4379.25</TD></TR>
+<TR class="a">
+<TD class="left">n</TD><TD class="left">numerictype(0, 10, 0)</TD><TD class="right">Unknown</TD><TD class="right">Unknown</TD></TR>
+<TR class="b">
+<TD class="left">x</TD><TD class="left">numerictype(1, 16, 14) 1 x 640 </TD><TD class="right">-1.99835205078125</TD><TD class="right">1.996826171875</TD></TR>
+<TR class="a">
+<TD class="left">x_min_Q2</TD><TD class="left">numerictype(1, 16, 3)</TD><TD class="right">-2209.75</TD><TD class="right">2154.75</TD></TR>
+</TABLE>
+
+</body>
+</html>

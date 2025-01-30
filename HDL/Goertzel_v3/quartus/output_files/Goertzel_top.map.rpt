@@ -1,0 +1,1114 @@
+Analysis & Synthesis report for Goertzel_top
+Tue Jan 14 11:23:53 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |Goertzel_top|Goertzel:GOERTZEL_1477|state
+ 10. State Machine - |Goertzel_top|Goertzel:GOERTZEL_1336|state
+ 11. State Machine - |Goertzel_top|Goertzel:GOERTZEL_1209|state
+ 12. State Machine - |Goertzel_top|Goertzel:GOERTZEL_941|state
+ 13. State Machine - |Goertzel_top|Goertzel:GOERTZEL_852|state
+ 14. State Machine - |Goertzel_top|Goertzel:GOERTZEL_770|state
+ 15. State Machine - |Goertzel_top|Goertzel:GOERTZEL_697|state
+ 16. Registers Removed During Synthesis
+ 17. General Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Parameter Settings for User Entity Instance: Top-level Entity: |Goertzel_top
+ 20. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_697
+ 21. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_770
+ 22. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_852
+ 23. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_941
+ 24. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_1209
+ 25. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_1336
+ 26. Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_1477
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Jan 14 11:23:53 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Goertzel_top                                ;
+; Top-level Entity Name           ; Goertzel_top                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 2296                                        ;
+; Total pins                      ; 141                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 21                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Goertzel_top       ; Goertzel_top       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                           ;
++-------------------------------------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------------+
+; File Name with User-Entered Path                                                          ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library       ;
++-------------------------------------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------------+
+; Goertzel.vhd                                                                              ; yes             ; User VHDL File  ; C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel.vhd                           ;               ;
+; ../../../../intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd         ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd         ; ieee_proposed ;
+; ../../../../intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_float_types_c.vhd ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_float_types_c.vhd ; floatfixlib   ;
+; Goertzel_top.vhd                                                                          ; yes             ; User VHDL File  ; C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd                       ;               ;
++-------------------------------------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1627      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 2390      ;
+;     -- 7 input functions                    ; 105       ;
+;     -- 6 input functions                    ; 360       ;
+;     -- 5 input functions                    ; 337       ;
+;     -- 4 input functions                    ; 320       ;
+;     -- <=3 input functions                  ; 1268      ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 2296      ;
+;                                             ;           ;
+; I/O pins                                    ; 141       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 21        ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2296      ;
+; Total fan-out                               ; 17903     ;
+; Average fan-out                             ; 3.59      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name  ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------+--------------+
+; |Goertzel_top               ; 2390 (0)            ; 2296 (0)                  ; 0                 ; 21         ; 141  ; 0            ; |Goertzel_top                        ; Goertzel_top ; work         ;
+;    |Goertzel:GOERTZEL_1209| ; 361 (361)           ; 376 (376)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_1209 ; Goertzel     ; work         ;
+;    |Goertzel:GOERTZEL_1336| ; 337 (337)           ; 320 (320)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_1336 ; Goertzel     ; work         ;
+;    |Goertzel:GOERTZEL_1477| ; 337 (337)           ; 320 (320)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_1477 ; Goertzel     ; work         ;
+;    |Goertzel:GOERTZEL_697|  ; 344 (344)           ; 320 (320)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_697  ; Goertzel     ; work         ;
+;    |Goertzel:GOERTZEL_770|  ; 337 (337)           ; 320 (320)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_770  ; Goertzel     ; work         ;
+;    |Goertzel:GOERTZEL_852|  ; 337 (337)           ; 320 (320)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_852  ; Goertzel     ; work         ;
+;    |Goertzel:GOERTZEL_941|  ; 337 (337)           ; 320 (320)                 ; 0                 ; 3          ; 0    ; 0            ; |Goertzel_top|Goertzel:GOERTZEL_941  ; Goertzel     ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary    ;
++-----------------------------------+-------------+
+; Statistic                         ; Number Used ;
++-----------------------------------+-------------+
+; Two Independent 18x18             ; 21          ;
+; Total number of DSP blocks        ; 21          ;
+;                                   ;             ;
+; Fixed Point Signed Multiplier     ; 14          ;
+; Fixed Point Mixed Sign Multiplier ; 7           ;
++-----------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_1477|state                                                                                                                                                                                                                               ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_1336|state                                                                                                                                                                                                                               ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_1209|state                                                                                                                                                                                                                               ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_941|state                                                                                                                                                                                                                                ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_852|state                                                                                                                                                                                                                                ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_770|state                                                                                                                                                                                                                                ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Goertzel_top|Goertzel:GOERTZEL_697|state                                                                                                                                                                                                                                ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; Name                   ; state.OUTPUT ; state.COMPUTE_POWER_5 ; state.COMPUTE_POWER_4 ; state.COMPUTE_POWER_3 ; state.COMPUTE_POWER_2 ; state.COMPUTE_POWER_1 ; state.UPDATE ; state.STORE_TO_Q0 ; state.COMPUTE_FILTER_3 ; state.COMPUTE_FILTER_2 ; state.COMPUTE_FILTER_1 ; state.IDLE ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+; state.IDLE             ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 0          ;
+; state.COMPUTE_FILTER_1 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 1                      ; 1          ;
+; state.COMPUTE_FILTER_2 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 1                      ; 0                      ; 1          ;
+; state.COMPUTE_FILTER_3 ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 1                      ; 0                      ; 0                      ; 1          ;
+; state.STORE_TO_Q0      ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 1                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.UPDATE           ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_1  ; 0            ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_2  ; 0            ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_3  ; 0            ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_4  ; 0            ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.COMPUTE_POWER_5  ; 0            ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
+; state.OUTPUT           ; 1            ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0            ; 0                 ; 0                      ; 0                      ; 0                      ; 1          ;
++------------------------+--------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------+-------------------+------------------------+------------------------+------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; Register name                                 ; Reason for Removal                                        ;
++-----------------------------------------------+-----------------------------------------------------------+
+; Goertzel:GOERTZEL_1477|mult_a[1]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[0]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-1]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-2]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-3]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-4]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-5]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-6]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-7]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-8]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-9]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-10]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-11]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-12]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-13]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1477|mult_a[-14]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[1]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[0]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-1]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-2]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-3]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-4]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-5]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-6]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-7]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-8]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-9]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-10]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-11]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-12]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-13]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|mult_a[-14]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[1]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[0]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-1]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-2]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-3]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-4]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-5]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-6]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-7]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-8]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-9]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-10]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-11]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-12]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-13]            ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1209|mult_a[-14]            ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[1]               ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[0]               ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-1]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-2]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-3]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-4]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-5]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-6]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-7]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-8]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-9]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-10]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-11]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-12]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-13]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_941|mult_a[-14]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[1]               ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[0]               ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-1]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-2]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-3]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-4]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-5]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-6]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-7]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-8]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-9]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-10]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-11]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-12]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-13]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_852|mult_a[-14]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[1]               ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[0]               ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-1]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-2]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-3]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-4]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-5]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-6]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-7]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-8]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-9]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-10]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-11]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-12]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-13]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_770|mult_a[-14]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[1]               ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[0]               ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-1]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-2]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-3]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-4]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-5]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-6]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-7]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-8]              ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-9]              ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-10]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-11]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-12]             ; Stuck at GND due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-13]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_697|mult_a[-14]             ; Stuck at VCC due to stuck port data_in                    ;
+; Goertzel:GOERTZEL_1336|in_ready               ; Merged with Goertzel:GOERTZEL_1209|in_ready               ;
+; Goertzel:GOERTZEL_1477|in_ready               ; Merged with Goertzel:GOERTZEL_1209|in_ready               ;
+; Goertzel:GOERTZEL_697|in_ready                ; Merged with Goertzel:GOERTZEL_1209|in_ready               ;
+; Goertzel:GOERTZEL_770|in_ready                ; Merged with Goertzel:GOERTZEL_1209|in_ready               ;
+; Goertzel:GOERTZEL_852|in_ready                ; Merged with Goertzel:GOERTZEL_1209|in_ready               ;
+; Goertzel:GOERTZEL_941|in_ready                ; Merged with Goertzel:GOERTZEL_1209|in_ready               ;
+; Goertzel:GOERTZEL_1336|out_valid              ; Merged with Goertzel:GOERTZEL_1209|out_valid              ;
+; Goertzel:GOERTZEL_1477|out_valid              ; Merged with Goertzel:GOERTZEL_1209|out_valid              ;
+; Goertzel:GOERTZEL_697|out_valid               ; Merged with Goertzel:GOERTZEL_1209|out_valid              ;
+; Goertzel:GOERTZEL_770|out_valid               ; Merged with Goertzel:GOERTZEL_1209|out_valid              ;
+; Goertzel:GOERTZEL_852|out_valid               ; Merged with Goertzel:GOERTZEL_1209|out_valid              ;
+; Goertzel:GOERTZEL_941|out_valid               ; Merged with Goertzel:GOERTZEL_1209|out_valid              ;
+; Goertzel:GOERTZEL_1336|state.IDLE             ; Merged with Goertzel:GOERTZEL_1209|state.IDLE             ;
+; Goertzel:GOERTZEL_1477|state.IDLE             ; Merged with Goertzel:GOERTZEL_1209|state.IDLE             ;
+; Goertzel:GOERTZEL_697|state.IDLE              ; Merged with Goertzel:GOERTZEL_1209|state.IDLE             ;
+; Goertzel:GOERTZEL_770|state.IDLE              ; Merged with Goertzel:GOERTZEL_1209|state.IDLE             ;
+; Goertzel:GOERTZEL_852|state.IDLE              ; Merged with Goertzel:GOERTZEL_1209|state.IDLE             ;
+; Goertzel:GOERTZEL_941|state.IDLE              ; Merged with Goertzel:GOERTZEL_1209|state.IDLE             ;
+; Goertzel:GOERTZEL_1336|state.OUTPUT           ; Merged with Goertzel:GOERTZEL_1209|state.OUTPUT           ;
+; Goertzel:GOERTZEL_1477|state.OUTPUT           ; Merged with Goertzel:GOERTZEL_1209|state.OUTPUT           ;
+; Goertzel:GOERTZEL_697|state.OUTPUT            ; Merged with Goertzel:GOERTZEL_1209|state.OUTPUT           ;
+; Goertzel:GOERTZEL_770|state.OUTPUT            ; Merged with Goertzel:GOERTZEL_1209|state.OUTPUT           ;
+; Goertzel:GOERTZEL_852|state.OUTPUT            ; Merged with Goertzel:GOERTZEL_1209|state.OUTPUT           ;
+; Goertzel:GOERTZEL_941|state.OUTPUT            ; Merged with Goertzel:GOERTZEL_1209|state.OUTPUT           ;
+; Goertzel:GOERTZEL_1336|counter[5]             ; Merged with Goertzel:GOERTZEL_1209|counter[5]             ;
+; Goertzel:GOERTZEL_1477|counter[5]             ; Merged with Goertzel:GOERTZEL_1209|counter[5]             ;
+; Goertzel:GOERTZEL_697|counter[5]              ; Merged with Goertzel:GOERTZEL_1209|counter[5]             ;
+; Goertzel:GOERTZEL_770|counter[5]              ; Merged with Goertzel:GOERTZEL_1209|counter[5]             ;
+; Goertzel:GOERTZEL_852|counter[5]              ; Merged with Goertzel:GOERTZEL_1209|counter[5]             ;
+; Goertzel:GOERTZEL_941|counter[5]              ; Merged with Goertzel:GOERTZEL_1209|counter[5]             ;
+; Goertzel:GOERTZEL_1336|counter[7]             ; Merged with Goertzel:GOERTZEL_1209|counter[7]             ;
+; Goertzel:GOERTZEL_1477|counter[7]             ; Merged with Goertzel:GOERTZEL_1209|counter[7]             ;
+; Goertzel:GOERTZEL_697|counter[7]              ; Merged with Goertzel:GOERTZEL_1209|counter[7]             ;
+; Goertzel:GOERTZEL_770|counter[7]              ; Merged with Goertzel:GOERTZEL_1209|counter[7]             ;
+; Goertzel:GOERTZEL_852|counter[7]              ; Merged with Goertzel:GOERTZEL_1209|counter[7]             ;
+; Goertzel:GOERTZEL_941|counter[7]              ; Merged with Goertzel:GOERTZEL_1209|counter[7]             ;
+; Goertzel:GOERTZEL_1336|counter[8]             ; Merged with Goertzel:GOERTZEL_1209|counter[8]             ;
+; Goertzel:GOERTZEL_1477|counter[8]             ; Merged with Goertzel:GOERTZEL_1209|counter[8]             ;
+; Goertzel:GOERTZEL_697|counter[8]              ; Merged with Goertzel:GOERTZEL_1209|counter[8]             ;
+; Goertzel:GOERTZEL_770|counter[8]              ; Merged with Goertzel:GOERTZEL_1209|counter[8]             ;
+; Goertzel:GOERTZEL_852|counter[8]              ; Merged with Goertzel:GOERTZEL_1209|counter[8]             ;
+; Goertzel:GOERTZEL_941|counter[8]              ; Merged with Goertzel:GOERTZEL_1209|counter[8]             ;
+; Goertzel:GOERTZEL_1336|counter[9]             ; Merged with Goertzel:GOERTZEL_1209|counter[9]             ;
+; Goertzel:GOERTZEL_1477|counter[9]             ; Merged with Goertzel:GOERTZEL_1209|counter[9]             ;
+; Goertzel:GOERTZEL_697|counter[9]              ; Merged with Goertzel:GOERTZEL_1209|counter[9]             ;
+; Goertzel:GOERTZEL_770|counter[9]              ; Merged with Goertzel:GOERTZEL_1209|counter[9]             ;
+; Goertzel:GOERTZEL_852|counter[9]              ; Merged with Goertzel:GOERTZEL_1209|counter[9]             ;
+; Goertzel:GOERTZEL_941|counter[9]              ; Merged with Goertzel:GOERTZEL_1209|counter[9]             ;
+; Goertzel:GOERTZEL_1336|counter[6]             ; Merged with Goertzel:GOERTZEL_1209|counter[6]             ;
+; Goertzel:GOERTZEL_1477|counter[6]             ; Merged with Goertzel:GOERTZEL_1209|counter[6]             ;
+; Goertzel:GOERTZEL_697|counter[6]              ; Merged with Goertzel:GOERTZEL_1209|counter[6]             ;
+; Goertzel:GOERTZEL_770|counter[6]              ; Merged with Goertzel:GOERTZEL_1209|counter[6]             ;
+; Goertzel:GOERTZEL_852|counter[6]              ; Merged with Goertzel:GOERTZEL_1209|counter[6]             ;
+; Goertzel:GOERTZEL_941|counter[6]              ; Merged with Goertzel:GOERTZEL_1209|counter[6]             ;
+; Goertzel:GOERTZEL_1336|counter[0]             ; Merged with Goertzel:GOERTZEL_1209|counter[0]             ;
+; Goertzel:GOERTZEL_1477|counter[0]             ; Merged with Goertzel:GOERTZEL_1209|counter[0]             ;
+; Goertzel:GOERTZEL_697|counter[0]              ; Merged with Goertzel:GOERTZEL_1209|counter[0]             ;
+; Goertzel:GOERTZEL_770|counter[0]              ; Merged with Goertzel:GOERTZEL_1209|counter[0]             ;
+; Goertzel:GOERTZEL_852|counter[0]              ; Merged with Goertzel:GOERTZEL_1209|counter[0]             ;
+; Goertzel:GOERTZEL_941|counter[0]              ; Merged with Goertzel:GOERTZEL_1209|counter[0]             ;
+; Goertzel:GOERTZEL_1336|counter[1]             ; Merged with Goertzel:GOERTZEL_1209|counter[1]             ;
+; Goertzel:GOERTZEL_1477|counter[1]             ; Merged with Goertzel:GOERTZEL_1209|counter[1]             ;
+; Goertzel:GOERTZEL_697|counter[1]              ; Merged with Goertzel:GOERTZEL_1209|counter[1]             ;
+; Goertzel:GOERTZEL_770|counter[1]              ; Merged with Goertzel:GOERTZEL_1209|counter[1]             ;
+; Goertzel:GOERTZEL_852|counter[1]              ; Merged with Goertzel:GOERTZEL_1209|counter[1]             ;
+; Goertzel:GOERTZEL_941|counter[1]              ; Merged with Goertzel:GOERTZEL_1209|counter[1]             ;
+; Goertzel:GOERTZEL_1336|counter[2]             ; Merged with Goertzel:GOERTZEL_1209|counter[2]             ;
+; Goertzel:GOERTZEL_1477|counter[2]             ; Merged with Goertzel:GOERTZEL_1209|counter[2]             ;
+; Goertzel:GOERTZEL_697|counter[2]              ; Merged with Goertzel:GOERTZEL_1209|counter[2]             ;
+; Goertzel:GOERTZEL_770|counter[2]              ; Merged with Goertzel:GOERTZEL_1209|counter[2]             ;
+; Goertzel:GOERTZEL_852|counter[2]              ; Merged with Goertzel:GOERTZEL_1209|counter[2]             ;
+; Goertzel:GOERTZEL_941|counter[2]              ; Merged with Goertzel:GOERTZEL_1209|counter[2]             ;
+; Goertzel:GOERTZEL_1336|counter[3]             ; Merged with Goertzel:GOERTZEL_1209|counter[3]             ;
+; Goertzel:GOERTZEL_1477|counter[3]             ; Merged with Goertzel:GOERTZEL_1209|counter[3]             ;
+; Goertzel:GOERTZEL_697|counter[3]              ; Merged with Goertzel:GOERTZEL_1209|counter[3]             ;
+; Goertzel:GOERTZEL_770|counter[3]              ; Merged with Goertzel:GOERTZEL_1209|counter[3]             ;
+; Goertzel:GOERTZEL_852|counter[3]              ; Merged with Goertzel:GOERTZEL_1209|counter[3]             ;
+; Goertzel:GOERTZEL_941|counter[3]              ; Merged with Goertzel:GOERTZEL_1209|counter[3]             ;
+; Goertzel:GOERTZEL_1336|counter[4]             ; Merged with Goertzel:GOERTZEL_1209|counter[4]             ;
+; Goertzel:GOERTZEL_1477|counter[4]             ; Merged with Goertzel:GOERTZEL_1209|counter[4]             ;
+; Goertzel:GOERTZEL_697|counter[4]              ; Merged with Goertzel:GOERTZEL_1209|counter[4]             ;
+; Goertzel:GOERTZEL_770|counter[4]              ; Merged with Goertzel:GOERTZEL_1209|counter[4]             ;
+; Goertzel:GOERTZEL_852|counter[4]              ; Merged with Goertzel:GOERTZEL_1209|counter[4]             ;
+; Goertzel:GOERTZEL_941|counter[4]              ; Merged with Goertzel:GOERTZEL_1209|counter[4]             ;
+; Goertzel:GOERTZEL_1336|state.UPDATE           ; Merged with Goertzel:GOERTZEL_1209|state.UPDATE           ;
+; Goertzel:GOERTZEL_1477|state.UPDATE           ; Merged with Goertzel:GOERTZEL_1209|state.UPDATE           ;
+; Goertzel:GOERTZEL_697|state.UPDATE            ; Merged with Goertzel:GOERTZEL_1209|state.UPDATE           ;
+; Goertzel:GOERTZEL_770|state.UPDATE            ; Merged with Goertzel:GOERTZEL_1209|state.UPDATE           ;
+; Goertzel:GOERTZEL_852|state.UPDATE            ; Merged with Goertzel:GOERTZEL_1209|state.UPDATE           ;
+; Goertzel:GOERTZEL_941|state.UPDATE            ; Merged with Goertzel:GOERTZEL_1209|state.UPDATE           ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_POWER_5  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_5  ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_POWER_5  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_5  ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_POWER_5   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_5  ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_POWER_5   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_5  ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_POWER_5   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_5  ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_POWER_5   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_5  ;
+; Goertzel:GOERTZEL_1336|state.STORE_TO_Q0      ; Merged with Goertzel:GOERTZEL_1209|state.STORE_TO_Q0      ;
+; Goertzel:GOERTZEL_1477|state.STORE_TO_Q0      ; Merged with Goertzel:GOERTZEL_1209|state.STORE_TO_Q0      ;
+; Goertzel:GOERTZEL_697|state.STORE_TO_Q0       ; Merged with Goertzel:GOERTZEL_1209|state.STORE_TO_Q0      ;
+; Goertzel:GOERTZEL_770|state.STORE_TO_Q0       ; Merged with Goertzel:GOERTZEL_1209|state.STORE_TO_Q0      ;
+; Goertzel:GOERTZEL_852|state.STORE_TO_Q0       ; Merged with Goertzel:GOERTZEL_1209|state.STORE_TO_Q0      ;
+; Goertzel:GOERTZEL_941|state.STORE_TO_Q0       ; Merged with Goertzel:GOERTZEL_1209|state.STORE_TO_Q0      ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_POWER_4  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_4  ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_POWER_4  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_4  ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_POWER_4   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_4  ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_POWER_4   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_4  ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_POWER_4   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_4  ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_POWER_4   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_4  ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_POWER_2  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_2  ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_POWER_2  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_2  ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_POWER_2   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_2  ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_POWER_2   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_2  ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_POWER_2   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_2  ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_POWER_2   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_2  ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_FILTER_3 ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_3 ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_FILTER_3 ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_3 ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_FILTER_3  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_3 ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_FILTER_3  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_3 ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_FILTER_3  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_3 ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_FILTER_3  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_3 ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_POWER_3  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_3  ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_POWER_3  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_3  ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_POWER_3   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_3  ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_POWER_3   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_3  ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_POWER_3   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_3  ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_POWER_3   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_3  ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_POWER_1  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_1  ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_POWER_1  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_1  ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_POWER_1   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_1  ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_POWER_1   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_1  ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_POWER_1   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_1  ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_POWER_1   ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_POWER_1  ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_FILTER_2 ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_2 ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_FILTER_2 ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_2 ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_FILTER_2  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_2 ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_FILTER_2  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_2 ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_FILTER_2  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_2 ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_FILTER_2  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_2 ;
+; Goertzel:GOERTZEL_1336|state.COMPUTE_FILTER_1 ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_1 ;
+; Goertzel:GOERTZEL_1477|state.COMPUTE_FILTER_1 ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_1 ;
+; Goertzel:GOERTZEL_697|state.COMPUTE_FILTER_1  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_1 ;
+; Goertzel:GOERTZEL_770|state.COMPUTE_FILTER_1  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_1 ;
+; Goertzel:GOERTZEL_852|state.COMPUTE_FILTER_1  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_1 ;
+; Goertzel:GOERTZEL_941|state.COMPUTE_FILTER_1  ; Merged with Goertzel:GOERTZEL_1209|state.COMPUTE_FILTER_1 ;
+; Goertzel:GOERTZEL_1336|sub_a[-5]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-5]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-5]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-5]              ;
+; Goertzel:GOERTZEL_697|sub_a[-5]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-5]              ;
+; Goertzel:GOERTZEL_770|sub_a[-5]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-5]              ;
+; Goertzel:GOERTZEL_852|sub_a[-5]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-5]              ;
+; Goertzel:GOERTZEL_941|sub_a[-5]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-5]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-6]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-6]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-6]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-6]              ;
+; Goertzel:GOERTZEL_697|sub_a[-6]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-6]              ;
+; Goertzel:GOERTZEL_770|sub_a[-6]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-6]              ;
+; Goertzel:GOERTZEL_852|sub_a[-6]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-6]              ;
+; Goertzel:GOERTZEL_941|sub_a[-6]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-6]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-7]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-7]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-7]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-7]              ;
+; Goertzel:GOERTZEL_697|sub_a[-7]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-7]              ;
+; Goertzel:GOERTZEL_770|sub_a[-7]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-7]              ;
+; Goertzel:GOERTZEL_852|sub_a[-7]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-7]              ;
+; Goertzel:GOERTZEL_941|sub_a[-7]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-7]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-8]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-8]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-8]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-8]              ;
+; Goertzel:GOERTZEL_697|sub_a[-8]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-8]              ;
+; Goertzel:GOERTZEL_770|sub_a[-8]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-8]              ;
+; Goertzel:GOERTZEL_852|sub_a[-8]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-8]              ;
+; Goertzel:GOERTZEL_941|sub_a[-8]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-8]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-9]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-9]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-9]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-9]              ;
+; Goertzel:GOERTZEL_697|sub_a[-9]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-9]              ;
+; Goertzel:GOERTZEL_770|sub_a[-9]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-9]              ;
+; Goertzel:GOERTZEL_852|sub_a[-9]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-9]              ;
+; Goertzel:GOERTZEL_941|sub_a[-9]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-9]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-10]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-10]             ;
+; Goertzel:GOERTZEL_1477|sub_a[-10]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-10]             ;
+; Goertzel:GOERTZEL_697|sub_a[-10]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-10]             ;
+; Goertzel:GOERTZEL_770|sub_a[-10]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-10]             ;
+; Goertzel:GOERTZEL_852|sub_a[-10]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-10]             ;
+; Goertzel:GOERTZEL_941|sub_a[-10]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-10]             ;
+; Goertzel:GOERTZEL_1336|sub_a[-11]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-11]             ;
+; Goertzel:GOERTZEL_1477|sub_a[-11]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-11]             ;
+; Goertzel:GOERTZEL_697|sub_a[-11]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-11]             ;
+; Goertzel:GOERTZEL_770|sub_a[-11]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-11]             ;
+; Goertzel:GOERTZEL_852|sub_a[-11]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-11]             ;
+; Goertzel:GOERTZEL_941|sub_a[-11]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-11]             ;
+; Goertzel:GOERTZEL_1336|sub_a[-12]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-12]             ;
+; Goertzel:GOERTZEL_1477|sub_a[-12]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-12]             ;
+; Goertzel:GOERTZEL_697|sub_a[-12]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-12]             ;
+; Goertzel:GOERTZEL_770|sub_a[-12]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-12]             ;
+; Goertzel:GOERTZEL_852|sub_a[-12]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-12]             ;
+; Goertzel:GOERTZEL_941|sub_a[-12]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-12]             ;
+; Goertzel:GOERTZEL_1336|sub_a[-13]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-13]             ;
+; Goertzel:GOERTZEL_1477|sub_a[-13]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-13]             ;
+; Goertzel:GOERTZEL_697|sub_a[-13]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-13]             ;
+; Goertzel:GOERTZEL_770|sub_a[-13]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-13]             ;
+; Goertzel:GOERTZEL_852|sub_a[-13]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-13]             ;
+; Goertzel:GOERTZEL_941|sub_a[-13]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-13]             ;
+; Goertzel:GOERTZEL_1336|sub_a[-14]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-14]             ;
+; Goertzel:GOERTZEL_1477|sub_a[-14]             ; Merged with Goertzel:GOERTZEL_1209|sub_a[-14]             ;
+; Goertzel:GOERTZEL_697|sub_a[-14]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-14]             ;
+; Goertzel:GOERTZEL_770|sub_a[-14]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-14]             ;
+; Goertzel:GOERTZEL_852|sub_a[-14]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-14]             ;
+; Goertzel:GOERTZEL_941|sub_a[-14]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-14]             ;
+; Goertzel:GOERTZEL_1336|sub_a[1]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[1]               ;
+; Goertzel:GOERTZEL_1477|sub_a[1]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[1]               ;
+; Goertzel:GOERTZEL_697|sub_a[1]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[1]               ;
+; Goertzel:GOERTZEL_770|sub_a[1]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[1]               ;
+; Goertzel:GOERTZEL_852|sub_a[1]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[1]               ;
+; Goertzel:GOERTZEL_941|sub_a[1]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[1]               ;
+; Goertzel:GOERTZEL_1336|sub_a[0]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[0]               ;
+; Goertzel:GOERTZEL_1477|sub_a[0]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[0]               ;
+; Goertzel:GOERTZEL_697|sub_a[0]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[0]               ;
+; Goertzel:GOERTZEL_770|sub_a[0]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[0]               ;
+; Goertzel:GOERTZEL_852|sub_a[0]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[0]               ;
+; Goertzel:GOERTZEL_941|sub_a[0]                ; Merged with Goertzel:GOERTZEL_1209|sub_a[0]               ;
+; Goertzel:GOERTZEL_1336|sub_a[-1]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-1]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-1]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-1]              ;
+; Goertzel:GOERTZEL_697|sub_a[-1]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-1]              ;
+; Goertzel:GOERTZEL_770|sub_a[-1]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-1]              ;
+; Goertzel:GOERTZEL_852|sub_a[-1]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-1]              ;
+; Goertzel:GOERTZEL_941|sub_a[-1]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-1]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-2]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-2]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-2]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-2]              ;
+; Goertzel:GOERTZEL_697|sub_a[-2]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-2]              ;
+; Goertzel:GOERTZEL_770|sub_a[-2]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-2]              ;
+; Goertzel:GOERTZEL_852|sub_a[-2]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-2]              ;
+; Goertzel:GOERTZEL_941|sub_a[-2]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-2]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-3]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-3]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-3]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-3]              ;
+; Goertzel:GOERTZEL_697|sub_a[-3]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-3]              ;
+; Goertzel:GOERTZEL_770|sub_a[-3]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-3]              ;
+; Goertzel:GOERTZEL_852|sub_a[-3]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-3]              ;
+; Goertzel:GOERTZEL_941|sub_a[-3]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-3]              ;
+; Goertzel:GOERTZEL_1336|sub_a[-4]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-4]              ;
+; Goertzel:GOERTZEL_1477|sub_a[-4]              ; Merged with Goertzel:GOERTZEL_1209|sub_a[-4]              ;
+; Goertzel:GOERTZEL_697|sub_a[-4]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-4]              ;
+; Goertzel:GOERTZEL_770|sub_a[-4]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-4]              ;
+; Goertzel:GOERTZEL_852|sub_a[-4]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-4]              ;
+; Goertzel:GOERTZEL_941|sub_a[-4]               ; Merged with Goertzel:GOERTZEL_1209|sub_a[-4]              ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-5]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-5]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-5]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-5]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-5]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-5]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-5]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-5]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-5]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-5]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-5]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-5]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-6]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-6]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-6]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-6]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-6]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-6]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-6]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-6]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-6]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-6]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-6]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-6]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-7]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-7]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-7]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-7]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-7]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-7]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-7]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-7]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-7]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-7]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-7]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-7]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-8]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-8]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-8]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-8]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-8]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-8]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-8]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-8]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-8]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-8]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-8]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-8]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-9]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-9]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-9]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-9]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-9]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-9]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-9]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-9]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-9]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-9]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-9]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-9]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-10]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-10]      ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-10]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-10]      ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-10]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-10]      ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-10]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-10]      ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-10]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-10]      ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-10]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-10]      ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-11]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-11]      ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-11]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-11]      ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-11]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-11]      ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-11]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-11]      ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-11]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-11]      ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-11]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-11]      ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-12]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-12]      ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-12]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-12]      ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-12]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-12]      ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-12]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-12]      ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-12]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-12]      ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-12]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-12]      ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-13]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-13]      ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-13]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-13]      ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-13]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-13]      ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-13]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-13]      ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-13]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-13]      ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-13]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-13]      ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-14]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-14]      ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-14]      ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-14]      ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-14]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-14]      ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-14]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-14]      ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-14]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-14]      ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-14]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-14]      ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[1]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[1]        ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[1]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[1]        ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[1]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[1]        ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[1]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[1]        ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[1]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[1]        ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[1]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[1]        ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[0]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[0]        ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[0]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[0]        ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[0]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[0]        ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[0]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[0]        ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[0]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[0]        ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[0]         ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[0]        ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-1]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-1]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-1]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-1]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-1]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-1]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-1]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-1]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-1]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-1]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-1]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-1]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-2]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-2]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-2]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-2]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-2]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-2]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-2]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-2]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-2]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-2]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-2]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-2]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-3]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-3]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-3]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-3]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-3]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-3]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-3]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-3]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-3]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-3]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-3]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-3]       ;
+; Goertzel:GOERTZEL_1336|DTMF_sampled[-4]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-4]       ;
+; Goertzel:GOERTZEL_1477|DTMF_sampled[-4]       ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-4]       ;
+; Goertzel:GOERTZEL_697|DTMF_sampled[-4]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-4]       ;
+; Goertzel:GOERTZEL_770|DTMF_sampled[-4]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-4]       ;
+; Goertzel:GOERTZEL_852|DTMF_sampled[-4]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-4]       ;
+; Goertzel:GOERTZEL_941|DTMF_sampled[-4]        ; Merged with Goertzel:GOERTZEL_1209|DTMF_sampled[-4]       ;
+; Total Number of Removed Registers = 448       ;                                                           ;
++-----------------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2296  ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 112   ;
+; Number of registers using Asynchronous Clear ; 1090  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2282  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_697|coeff_Q1[9]      ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_770|coeff_Q1[5]      ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_852|coeff_Q1[9]      ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_941|coeff_Q1[7]      ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1209|coeff_Q1[11]    ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1336|coeff_Q1[2]     ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1477|coeff_Q1[0]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1477|square_in[-2]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1336|square_in[3]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1209|square_in[1]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_941|square_in[5]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_852|square_in[12]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_770|square_in[0]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_697|square_in[2]     ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_697|coeff_Q1_Q2[0]   ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_770|coeff_Q1_Q2[21]  ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_852|coeff_Q1_Q2[6]   ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_941|coeff_Q1_Q2[2]   ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1209|coeff_Q1_Q2[6]  ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1336|coeff_Q1_Q2[10] ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1477|coeff_Q1_Q2[18] ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_697|x_min_q2[0]      ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_770|x_min_q2[6]      ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_852|x_min_q2[-2]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_941|x_min_q2[11]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1209|x_min_q2[5]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1336|x_min_q2[3]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |Goertzel_top|Goertzel:GOERTZEL_1477|x_min_q2[3]     ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_697|result           ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_770|result           ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_852|result           ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_941|result           ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_1209|result          ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_1336|result          ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_1477|result          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_1477|Selector6       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_1336|Selector0       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_1209|Selector0       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_941|Selector6        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_852|Selector0        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_770|Selector6        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Goertzel_top|Goertzel:GOERTZEL_697|Selector6        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Goertzel_top ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                                      ;
+; BLOCK_SIZE     ; 640   ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_697 ;
++----------------+------------------+--------------------------------+
+; Parameter Name ; Value            ; Type                           ;
++----------------+------------------+--------------------------------+
+; data_width     ; 16               ; Signed Integer                 ;
+; block_size     ; 640              ; Signed Integer                 ;
+; coeff          ; 1.98113868088715 ; Signed Float                   ;
++----------------+------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_770 ;
++----------------+------------------+--------------------------------+
+; Parameter Name ; Value            ; Type                           ;
++----------------+------------------+--------------------------------+
+; data_width     ; 16               ; Signed Integer                 ;
+; block_size     ; 640              ; Signed Integer                 ;
+; coeff          ; 1.97537668119028 ; Signed Float                   ;
++----------------+------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_852 ;
++----------------+------------------+--------------------------------+
+; Parameter Name ; Value            ; Type                           ;
++----------------+------------------+--------------------------------+
+; data_width     ; 16               ; Signed Integer                 ;
+; block_size     ; 640              ; Signed Integer                 ;
+; coeff          ; 1.96885313617978 ; Signed Float                   ;
++----------------+------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_941 ;
++----------------+------------------+--------------------------------+
+; Parameter Name ; Value            ; Type                           ;
++----------------+------------------+--------------------------------+
+; data_width     ; 16               ; Signed Integer                 ;
+; block_size     ; 640              ; Signed Integer                 ;
+; coeff          ; 1.96530655866142 ; Signed Float                   ;
++----------------+------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_1209 ;
++----------------+------------------+---------------------------------+
+; Parameter Name ; Value            ; Type                            ;
++----------------+------------------+---------------------------------+
+; data_width     ; 16               ; Signed Integer                  ;
+; block_size     ; 640              ; Signed Integer                  ;
+; coeff          ; 1.94006250638909 ; Signed Float                    ;
++----------------+------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_1336 ;
++----------------+------------------+---------------------------------+
+; Parameter Name ; Value            ; Type                            ;
++----------------+------------------+---------------------------------+
+; data_width     ; 16               ; Signed Integer                  ;
+; block_size     ; 640              ; Signed Integer                  ;
+; coeff          ; 1.93014734462309 ; Signed Float                    ;
++----------------+------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Goertzel:GOERTZEL_1477 ;
++----------------+------------------+---------------------------------+
+; Parameter Name ; Value            ; Type                            ;
++----------------+------------------+---------------------------------+
+; data_width     ; 16               ; Signed Integer                  ;
+; block_size     ; 640              ; Signed Integer                  ;
+; coeff          ; 1.91388067146442 ; Signed Float                    ;
++----------------+------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 2296                        ;
+;     CLR               ; 14                          ;
+;     ENA               ; 1094                        ;
+;     ENA CLR           ; 1066                        ;
+;     ENA CLR SCLR      ; 10                          ;
+;     ENA SLD           ; 112                         ;
+; arriav_lcell_comb     ; 2390                        ;
+;     arith             ; 1060                        ;
+;         0 data inputs ; 21                          ;
+;         1 data inputs ; 164                         ;
+;         2 data inputs ; 609                         ;
+;         3 data inputs ; 105                         ;
+;         4 data inputs ; 161                         ;
+;     extend            ; 105                         ;
+;         7 data inputs ; 105                         ;
+;     normal            ; 931                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 54                          ;
+;         4 data inputs ; 159                         ;
+;         5 data inputs ; 337                         ;
+;         6 data inputs ; 360                         ;
+;     shared            ; 294                         ;
+;         2 data inputs ; 294                         ;
+; arriav_mac            ; 21                          ;
+; boundary_port         ; 141                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.50                        ;
+; Average LUT depth     ; 4.58                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Jan 14 11:23:31 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Goertzel_top -c Goertzel_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file goertzel.vhd
+    Info (12022): Found design unit 1: Goertzel-rtl File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel.vhd Line: 31
+    Info (12023): Found entity 1: Goertzel File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel.vhd Line: 9
+Info (12021): Found 2 design units, including 0 entities, in source file /intelfpga_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd
+    Info (12022): Found design unit 1: fixed_pkg (ieee_proposed) File: C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd Line: 25
+    Info (12022): Found design unit 2: fixed_pkg-body File: C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd Line: 1466
+Info (12021): Found 1 design units, including 0 entities, in source file /intelfpga_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_float_types_c.vhd
+    Info (12022): Found design unit 1: fixed_float_types (floatfixlib) File: C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_float_types_c.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file goertzel_top.vhd
+    Info (12022): Found design unit 1: Goertzel_top-rtl File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 36
+    Info (12023): Found entity 1: Goertzel_top File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 9
+Info (12127): Elaborating entity "Goertzel_top" for the top level hierarchy
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhd(1470): subtype or type has null range File: C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd Line: 1470
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhd(1471): subtype or type has null range File: C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd Line: 1471
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhd(1472): subtype or type has null range File: C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd Line: 1472
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_697" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 60
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_770" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 77
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_852" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 94
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_941" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 111
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_1209" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 128
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_1336" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 145
+Info (12129): Elaborating entity "Goertzel" using architecture "A:rtl" for hierarchy "Goertzel:GOERTZEL_1477" File: C:/Source Code TA/HDL/Goertzel_v3/quartus/Goertzel_top.vhd Line: 162
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4042 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 121 output pins
+    Info (21061): Implemented 3880 logic cells
+    Info (21062): Implemented 21 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4905 megabytes
+    Info: Processing ended: Tue Jan 14 11:23:53 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:40
+
+

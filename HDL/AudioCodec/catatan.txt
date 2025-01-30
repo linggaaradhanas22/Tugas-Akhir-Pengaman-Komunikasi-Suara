@@ -1,0 +1,14 @@
+bedanya desain echo generator sama recreation yg WM8731 itu entah kenapa mau generate echo-nya malah gak 
+bisa
+
+masalahnya itu di modul i2c nya ternyata:
+- di ver 2 itu proven gak jalan
+- tapi di ver 3 pake i2c dari echo generator amanaza
+
+
+Kesimpulannya: 
+- Masalah di I2C itu yang bikin audio codecnya gak bisa inisialisasi
+
+WM8731_pass itu versi final
+
+

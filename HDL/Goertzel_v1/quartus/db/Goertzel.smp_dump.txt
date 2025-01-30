@@ -1,0 +1,10 @@
+
+State Machine - |Goertzel|state
+Name state.OUTPUT state.UPDATE state.STORE_TO_TEMP state.COMPUTE_FILTER_3 state.COMPUTE_FILTER_2 state.COMPUTE_FILTER_1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 
+state.COMPUTE_FILTER_1 0 0 0 0 0 1 1 
+state.COMPUTE_FILTER_2 0 0 0 0 1 0 1 
+state.COMPUTE_FILTER_3 0 0 0 1 0 0 1 
+state.STORE_TO_TEMP 0 0 1 0 0 0 1 
+state.UPDATE 0 1 0 0 0 0 1 
+state.OUTPUT 1 0 0 0 0 0 1 

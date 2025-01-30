@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for ComputeGoertzelPower, GoertzelCalc</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2025-01-11 19:33:25</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>ComputeGoertzelPower<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [power, Q1_squared, Q2_squared, Q1_squared_plus_Q2_squared, coeff_Q1, coeff_Q1_Q2] = ComputeGoertzelPower(Q1, Q2, coeff)
+% ComputeGoertzelPower - Calculates the power of a frequency component using Goertzel algorithm
+%
+% This function computes the power of a specific frequency component using the
+% Goertzel algorithm's state variables (Q1, Q2) and the filter coefficient.
+%
+% Inputs:
+%   Q1    : First delay state variable from Goertzel filter
+%   Q2    : Second delay state variable from Goertzel filter
+%   coeff : Goertzel filter coefficient for the target frequency
+%
+% Output:
+%   power : Power of the frequency component
+%
+% The power is computed using the formula:
+%   power = Q1^2 + Q2^2 - coeff*Q1*Q2
+
+    % Initialize power computation variables
+    Q1_squared = 0;        % Store Q1^2
+    Q2_squared = 0;        % Store Q2^2
+    coeff_Q1 = 0;         % Store coefficient * Q1
+    coeff_Q1_Q2 = 0;      % Store coefficient * Q1 * Q2
+    power = 0;            % Final power value
+    
+    % Step 1: Compute squares of state variables
+    Q1_squared = Q1^2;    % Square of first state variable
+    Q2_squared = Q2^2;    % Square of second state variable
+    
+    % Step 2: Sum the squared terms
+    Q1_squared_plus_Q2_squared = Q1_squared + Q2_squared;
+    
+    % Step 3: Compute the cross-term components
+    coeff_Q1 = coeff * Q1;            % Multiply coefficient with Q1
+    coeff_Q1_Q2 = coeff_Q1 * Q2;      % Complete the cross-term multiplication
+    
+    % Step 4: Calculate final power
+    % Power = (Q1^2 + Q2^2) - coeff*Q1*Q2
+    power = Q1_squared_plus_Q2_squared - coeff_Q1_Q2;
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">Q1</TD><TD class="left">double</TD><TD class="right">-2231.8935610232647</TD><TD class="right">254.94449619366935</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 3)</TD></TR>
+<TR class="c">
+<TD class="left">Q1_squared</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">4981348.86773711</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, -7)</TD></TR>
+<TR class="c">
+<TD class="left">Q1_squared_plus_Q2_squared</TD><TD class="left">double</TD><TD class="right">1724.5601201804625</TD><TD class="right">9440224.708704881</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, -8)</TD></TR>
+<TR class="b">
+<TD class="left">Q2</TD><TD class="left">double</TD><TD class="right">-2111.605039056256</TD><TD class="right">268.75627897304395</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 3)</TD></TR>
+<TR class="c">
+<TD class="left">Q2_squared</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">4458875.8409677725</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, -7)</TD></TR>
+<TR class="b">
+<TD class="left">coeff</TD><TD class="left">double</TD><TD class="right">1.9138806714644176</TD><TD class="right">1.9811386808871545</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left">coeff_Q1</TD><TD class="left">double</TD><TD class="right">-4421.6906653661645</TD><TD class="right">494.60825827559347</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 2)</TD></TR>
+<TR class="c">
+<TD class="left">coeff_Q1_Q2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">9336864.290135201</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, -8)</TD></TR>
+<TR class="c">
+<TD class="left">power</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">103360.4185696803</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, -1)</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>GoertzelCalc<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [coeff_Q1, x_min_Q2, Q0, Q1, Q2] = GoertzelCalc(x, coeff)
+    % GoertzelFilter - Applies the Goertzel algorithm to a signal x
+    % Inputs:
+    %   x     : Input signal (ADC samples)
+    %   coeff : Goertzel filter coefficient
+    % Output:
+    %   Q0    : Goertzel output 
+    %   Q1    : Delayed version of Q0
+    %   Q2    : Delayed version of Q2
+
+    N = length(x); % Get the number of samples
+    
+    % Initialize the state variables Q0, Q1, and Q2
+    Q0 = 0;
+    Q1 = 0;
+    Q2 = 0;
+    coeff_Q1 = 0;
+    x_min_Q2 = 0;
+
+
+    % Loop through the input signal x
+    for n = 1:N        
+        % Update the state variables
+        Q2 (:) = Q1;
+        Q1 (:) = Q0;
+        
+        % Compute multiplication of coeff and Q1
+        coeff_Q1 (:) = coeff * Q1;
+
+        % Compute substraction between x and Q2
+        x_min_Q2 (:) = x(n) - Q2; 
+        
+        % Compute Q0 based on the Goertzel algorithm equation
+        Q0 (:) = coeff_Q1 + x_min_Q2;
+
+
+    end
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">N</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">640</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 10, 0)</TD></TR>
+<TR class="b">
+<TD class="left">Q0</TD><TD class="left">double</TD><TD class="right">-2309.797832870791</TD><TD class="right">2212.6177734751845</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 3)</TD></TR>
+<TR class="a">
+<TD class="left">Q1</TD><TD class="left">double</TD><TD class="right">-2231.8935610232647</TD><TD class="right">2212.6177734751845</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 3)</TD></TR>
+<TR class="b">
+<TD class="left">Q2</TD><TD class="left">double</TD><TD class="right">-2154.7069677248132</TD><TD class="right">2212.6177734751845</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 3)</TD></TR>
+<TR class="a">
+<TD class="left">coeff</TD><TD class="left">double</TD><TD class="right">1.9138806714644176</TD><TD class="right">1.9811386808871545</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left">coeff_Q1</TD><TD class="left">double</TD><TD class="right">-4421.6906653661645</TD><TD class="right">4383.5026570500995</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 2)</TD></TR>
+<TR class="a">
+<TD class="left">n</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">640</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 10, 0)</TD></TR>
+<TR class="b">
+<TD class="left">x</TD><TD class="left">double 1 x 640 </TD><TD class="right">-1.9972396567299466</TD><TD class="right">1.992766247733437</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left">x_min_Q2</TD><TD class="left">double</TD><TD class="right">-2211.854857322554</TD><TD class="right">2154.481255581605</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 3)</TD></TR>
+</TABLE>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+	"common_dir" : "C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/",
+	"acds_version" : "Version 18.1.0",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "quartus/WM8731_Pass.qpf"
+}

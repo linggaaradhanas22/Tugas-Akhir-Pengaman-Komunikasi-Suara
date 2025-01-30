@@ -1,0 +1,39 @@
+function [power, Q1_squared, Q2_squared, Q1_squared_plus_Q2_squared, coeff_Q1, coeff_Q1_Q2] = ComputeGoertzelPower(Q1, Q2, coeff)
+% ComputeGoertzelPower - Calculates the power of a frequency component using Goertzel algorithm
+%
+% This function computes the power of a specific frequency component using the
+% Goertzel algorithm's state variables (Q1, Q2) and the filter coefficient.
+%
+% Inputs:
+%   Q1    : First delay state variable from Goertzel filter
+%   Q2    : Second delay state variable from Goertzel filter
+%   coeff : Goertzel filter coefficient for the target frequency
+%
+% Output:
+%   power : Power of the frequency component
+%
+% The power is computed using the formula:
+%   power = Q1^2 + Q2^2 - coeff*Q1*Q2
+
+    % Initialize power computation variables
+    Q1_squared = 0;        % Store Q1^2
+    Q2_squared = 0;        % Store Q2^2
+    coeff_Q1 = 0;         % Store coefficient * Q1
+    coeff_Q1_Q2 = 0;      % Store coefficient * Q1 * Q2
+    power = 0;            % Final power value
+    
+    % Step 1: Compute squares of state variables
+    Q1_squared = Q1^2;    % Square of first state variable
+    Q2_squared = Q2^2;    % Square of second state variable
+    
+    % Step 2: Sum the squared terms
+    Q1_squared_plus_Q2_squared = Q1_squared + Q2_squared;
+    
+    % Step 3: Compute the cross-term components
+    coeff_Q1 = coeff * Q1;            % Multiply coefficient with Q1
+    coeff_Q1_Q2 = coeff_Q1 * Q2;      % Complete the cross-term multiplication
+    
+    % Step 4: Calculate final power
+    % Power = (Q1^2 + Q2^2) - coeff*Q1*Q2
+    power = Q1_squared_plus_Q2_squared - coeff_Q1_Q2;
+end

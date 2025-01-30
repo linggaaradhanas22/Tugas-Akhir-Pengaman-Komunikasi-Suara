@@ -1,0 +1,3 @@
+ --> Sqrt_pkg
+my_hdlcoder_sqrt_bitset_control/Sqrt/Sqrt --> Sqrt_block
+my_hdlcoder_sqrt_bitset_control/Sqrt --> Sqrt

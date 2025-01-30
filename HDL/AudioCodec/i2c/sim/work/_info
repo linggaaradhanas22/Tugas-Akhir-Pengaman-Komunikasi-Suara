@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Ei2c
+Z0 w1735047848
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Source Code TA/HDL/AudioCodec/i2c/sim
+Z5 8C:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c.vhd
+Z6 FC:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c.vhd
+l0
+L5
+V=6VJjW`6ER;`2Fdn1g[ZN3
+!s100 XM?0:L0:N`aVQz`^`::j73
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1735047870
+!i10b 1
+Z9 !s108 1735047869.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c.vhd|
+Z11 !s107 C:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Ainitialization
+R1
+R2
+R3
+DEx4 work 3 i2c 0 22 =6VJjW`6ER;`2Fdn1g[ZN3
+l45
+L20
+VbjR9HbB;g0]AzCdU2ZK2o1
+!s100 PKGIWfgW9Fd>O3Wk0J>nS2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ei2c_tb
+Z14 w1735048869
+R1
+R2
+R3
+R4
+Z15 8C:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c_tb.vhd
+Z16 FC:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c_tb.vhd
+l0
+L5
+VFH6OG^>zX7i=leoK[6BaM3
+!s100 AHiKO^liXkS^nbnR0Cfdh3
+R7
+32
+Z17 !s110 1735048994
+!i10b 1
+Z18 !s108 1735048994.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c_tb.vhd|
+Z20 !s107 C:/Source Code TA/HDL/AudioCodec/i2c/sim/i2c_tb.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 6 i2c_tb 0 22 FH6OG^>zX7i=leoK[6BaM3
+l40
+L8
+VUkGzdIWzXUnf>0XCS5U843
+!s100 Wa?TDXJ8EkU]1a04;eGGM3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13

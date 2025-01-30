@@ -1,0 +1,109 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Egoertzel
+Z0 w1736620737
+Z1 DPx4 ieee 17 fixed_float_types 0 22 JoVc:0L4XeXcaE?c:FVe62
+Z2 DPx4 ieee 17 fixed_generic_pkg 0 22 `=cI_4Mf07Y0RE[dTgE=F2
+Z3 DPx4 ieee 9 fixed_pkg 0 22 6nURH]dUY5@T6S0eLDXJe2
+Z4 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z5 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 dC:/Source Code TA/HDL/Goertzel_v2/sim
+Z9 8C:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel.vhd
+Z10 FC:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel.vhd
+l0
+L9
+VZ6FBRL5k;hd26h1Fifd@W2
+!s100 @Vbk39Ql;1f^3dMYo@a7E0
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1736620844
+!i10b 1
+Z13 !s108 1736620844.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel.vhd|
+Z15 !s107 C:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel.vhd|
+!i113 1
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+Z18 DEx4 work 8 goertzel 0 22 Z6FBRL5k;hd26h1Fifd@W2
+l102
+L31
+V<`1MD<1I4eNOgN_Lg02OH1
+!s100 @B^c8ITfGb985e[=Ub^;S1
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Egoertzel_tb
+Z19 w1736621643
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z20 8C:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel_tb.vhd
+Z21 FC:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel_tb.vhd
+l0
+L8
+V4lV?F;`hoK30kaV2J1D:Q0
+!s100 FjV5aD:k_4;1SPE>Voh0U1
+R11
+32
+Z22 !s110 1736621652
+!i10b 1
+Z23 !s108 1736621651.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel_tb.vhd|
+Z25 !s107 C:/Source Code TA/HDL/Goertzel_v2/hdl/Goertzel_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+Z26 DEx4 work 11 goertzel_tb 0 22 4lV?F;`hoK30kaV2J1D:Q0
+l55
+L11
+VhlbKoe2^^dD0h8?_h`g_21
+!s100 >H]JiVQ=dJF3LhWbD9;:31
+R11
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R16
+R17

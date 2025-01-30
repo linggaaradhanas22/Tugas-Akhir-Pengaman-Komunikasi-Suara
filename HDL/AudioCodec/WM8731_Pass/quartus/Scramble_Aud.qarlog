@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/Scramble_Aud.qarlog
+
+Archive:	C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/Scramble_Aud.qar
+Date:		Thu Jan 16 20:36:35 2025
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/hdl/Audio_interface.vhd
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/hdl/WM8731_Pass.vhd
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/hdl/i2c.vhd
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL.cmp
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL.qip
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL.sip
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL.spd
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL.vhd
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL/AudioPLL_0002.qip
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL/AudioPLL_0002.v
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/AudioPLL_sim/AudioPLL.vho
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/WM8731_Pass.SDC
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/WM8731_Pass.qpf
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/WM8731_Pass.qsf
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/WM8731_Pass.sdc
+C:/Source Code TA/HDL/AudioCodec/WM8731_Pass/quartus/WM8731_Pass_assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF_v2.qarlog
+
+Archive:	C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF_v2.qar
+Date:		Wed Jan 22 16:56:36 2025
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Source Code TA/HDL/GenerateDTMF/hdl/Audio_Generate_DTMF.vhd
+C:/Source Code TA/HDL/GenerateDTMF/hdl/Audio_interface.vhd
+C:/Source Code TA/HDL/GenerateDTMF/hdl/generate_dtmf_signed.vhd
+C:/Source Code TA/HDL/GenerateDTMF/hdl/i2c.vhd
+C:/Source Code TA/HDL/GenerateDTMF/hdl/sine_gen_signed.vhd
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL.cmp
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL.qip
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL.sip
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL.spd
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL.vhd
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL/AudioPLL_0002.qip
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL/AudioPLL_0002.v
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/AudioPLL_sim/AudioPLL.vho
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF.SDC
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF.qpf
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF.qsf
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF.sdc
+C:/Source Code TA/HDL/GenerateDTMF/quartus_AudioCodecGenerateDTMF/Audio_Generate_DTMF_assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

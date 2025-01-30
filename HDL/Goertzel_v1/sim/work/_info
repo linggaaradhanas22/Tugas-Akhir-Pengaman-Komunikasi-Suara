@@ -1,0 +1,409 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Egoertzel
+Z0 w1736412389
+Z1 DPx4 ieee 17 fixed_float_types 0 22 JoVc:0L4XeXcaE?c:FVe62
+Z2 DPx4 ieee 17 fixed_generic_pkg 0 22 `=cI_4Mf07Y0RE[dTgE=F2
+Z3 DPx4 ieee 9 fixed_pkg 0 22 6nURH]dUY5@T6S0eLDXJe2
+Z4 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z5 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 dC:/Source Code TA/HDL/Goertzel_v1/sim
+Z9 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel.vhd
+Z10 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel.vhd
+l0
+L9
+V`nnTGEz77oQJ9igGZhiI@2
+!s100 Qd5IYg[:;JLhNkEHDz?Y21
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1736413492
+!i10b 1
+Z13 !s108 1736413492.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel.vhd|
+Z15 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel.vhd|
+!i113 1
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+Z18 DEx4 work 8 goertzel 0 22 `nnTGEz77oQJ9igGZhiI@2
+l90
+L32
+V^BhYj4[[9^0UIzV:F7nHm2
+!s100 7:1;oQ253CGodS6PM>HZ72
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Egoertzel_1209_tb
+Z19 w1736420912
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z20 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1209_tb.vhd
+Z21 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1209_tb.vhd
+l0
+L8
+Vlgf47aAD1FH^<@Im^S]oe3
+!s100 8[d:SKIoI3XbnSKmMI[d=1
+R11
+32
+Z22 !s110 1736425433
+!i10b 1
+Z23 !s108 1736425433.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1209_tb.vhd|
+Z25 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1209_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 16 goertzel_1209_tb 0 22 lgf47aAD1FH^<@Im^S]oe3
+l44
+L11
+VPeh_h3U1_oH:65jX[G8JJ0
+!s100 e0fKE@ib`bBYMHVXVA8DD1
+R11
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R16
+R17
+Egoertzel_1336_tb
+Z26 w1736425735
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z27 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1336_tb.vhd
+Z28 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1336_tb.vhd
+l0
+L8
+VfaKDLzVZPVVSi^FW^L`FQ2
+!s100 c2VFef95_J1Xo7<5^OzAT2
+R11
+32
+Z29 !s110 1736426238
+!i10b 1
+Z30 !s108 1736426238.000000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1336_tb.vhd|
+Z32 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1336_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 16 goertzel_1336_tb 0 22 faKDLzVZPVVSi^FW^L`FQ2
+l44
+L11
+VOnH8FM2nY2<DLem;Q19ge1
+!s100 AHdVOcojNQa3Seg;6j@Zc2
+R11
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R16
+R17
+Egoertzel_1477_tb
+Z33 w1736426813
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z34 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1477_tb.vhd
+Z35 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1477_tb.vhd
+l0
+L8
+Vij1HmcPXIXUDMK[[1gj@c2
+!s100 NnTJYG8d`^i7nSDiPLJOX2
+R11
+32
+Z36 !s110 1736426931
+!i10b 1
+Z37 !s108 1736426930.000000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1477_tb.vhd|
+Z39 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_1477_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 16 goertzel_1477_tb 0 22 ij1HmcPXIXUDMK[[1gj@c2
+l44
+L11
+V1;>Z;4PU^R^^^DIV_TPSC3
+!s100 DKPMM1IM]3:<ZGZNDe>oH3
+R11
+32
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R16
+R17
+Egoertzel_697_tb
+Z40 w1736413391
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z41 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_697_tb.vhd
+Z42 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_697_tb.vhd
+l0
+L8
+VV;5D5f61cP[8N;4Wn]k4=1
+!s100 bg6CDBWn_oFS2ZMCl7Y?G1
+R11
+32
+R12
+!i10b 1
+R13
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_697_tb.vhd|
+Z44 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_697_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 15 goertzel_697_tb 0 22 V;5D5f61cP[8N;4Wn]k4=1
+l44
+L11
+VoYoDiZmA<GE=aFN4FWU972
+!s100 od><G3YGBRC`gI3Zn`[K00
+R11
+32
+R12
+!i10b 1
+R13
+R43
+R44
+!i113 1
+R16
+R17
+Egoertzel_770_tb
+Z45 w1736413470
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z46 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_770_tb.vhd
+Z47 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_770_tb.vhd
+l0
+L8
+VeWiaRV2dY?QhDCl40dUW30
+!s100 8z0IQl@f^]AlIniofM35B2
+R11
+32
+R12
+!i10b 1
+R13
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_770_tb.vhd|
+Z49 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_770_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 15 goertzel_770_tb 0 22 eWiaRV2dY?QhDCl40dUW30
+l44
+L11
+V=ikRkY8[V9R@7liT:VZGU2
+!s100 ?deh84fhBgzX3BSJLV=G62
+R11
+32
+R12
+!i10b 1
+R13
+R48
+R49
+!i113 1
+R16
+R17
+Egoertzel_852_tb
+Z50 w1736419228
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z51 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_852_tb.vhd
+Z52 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_852_tb.vhd
+l0
+L8
+V`jKZP:G:J8i4Kf2zMiejR1
+!s100 >[SOMb6kBhe9X0H_lUF0Y1
+R11
+32
+Z53 !s110 1736419240
+!i10b 1
+Z54 !s108 1736419240.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_852_tb.vhd|
+Z56 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_852_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 15 goertzel_852_tb 0 22 `jKZP:G:J8i4Kf2zMiejR1
+l44
+L11
+V=LX[[nkdj[9Ve9l]`:08f0
+!s100 F6XP]KeBY[?UEXj5<QKzV3
+R11
+32
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R16
+R17
+Egoertzel_941_tb
+Z57 w1736419992
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+R8
+Z58 8C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_941_tb.vhd
+Z59 FC:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_941_tb.vhd
+l0
+L8
+VDoaIBiz=SF7g@nBL>[35V3
+!s100 R1K>nNU1iKIYCmShWUBo=0
+R11
+32
+Z60 !s110 1736420046
+!i10b 1
+Z61 !s108 1736420046.000000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_941_tb.vhd|
+Z63 !s107 C:/Source Code TA/HDL/Goertzel_v1/hdl/Goertzel_941_tb.vhd|
+!i113 1
+R16
+R17
+Asim
+R18
+R4
+R1
+R2
+R3
+R5
+R6
+R7
+DEx4 work 15 goertzel_941_tb 0 22 DoaIBiz=SF7g@nBL>[35V3
+l44
+L11
+V5zGJ><1Y[_NE3;_OXRW?Y2
+!s100 dXU25S3HS<7lNiQ25MR[L1
+R11
+32
+R60
+!i10b 1
+R61
+R62
+R63
+!i113 1
+R16
+R17

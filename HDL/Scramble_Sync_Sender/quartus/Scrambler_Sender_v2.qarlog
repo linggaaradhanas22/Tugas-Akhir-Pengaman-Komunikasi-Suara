@@ -1,0 +1,39 @@
+Quartus Prime Archive log --	C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender_v2.qarlog
+
+Archive:	C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender_v2.qar
+Date:		Thu Jan 23 17:33:51 2025
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Audio_interface.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Butterfly.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/DelayBuffer.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/FFT64.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/GenPermutateKey.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Multiply.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/ReverseBitOrder.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Scrambler.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/ScramblerAudio.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Scrambler_Sender.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/SdfUnit.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Twiddle64.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/generate_dtmf_signed.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/i2c.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/sine_gen_signed.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL.cmp
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL.qip
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL.sip
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL.spd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL/AudioPLL_0002.qip
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL/AudioPLL_0002.v
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/AudioPLL_sim/AudioPLL.vho
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender.SDC
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender.qpf
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender.qsf
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender.sdc
+C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender_assignment_defaults.qdf
+	======= Total: 28 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

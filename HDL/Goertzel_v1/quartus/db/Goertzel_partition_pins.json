@@ -1,0 +1,289 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "in_ready",
+					"strict" : false
+				},
+				{
+					"name" : "out_valid",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "in_valid",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "out_ready",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DTMF_sig[13]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

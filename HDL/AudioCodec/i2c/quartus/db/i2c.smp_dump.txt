@@ -1,0 +1,8 @@
+
+State Machine - |i2c|AUDIO
+Name AUDIO.s5 AUDIO.s4 AUDIO.s3 AUDIO.s2 AUDIO.s1 
+AUDIO.s1 0 0 0 0 0 
+AUDIO.s2 0 0 0 1 1 
+AUDIO.s3 0 0 1 0 1 
+AUDIO.s4 0 1 0 0 1 
+AUDIO.s5 1 0 0 0 1 

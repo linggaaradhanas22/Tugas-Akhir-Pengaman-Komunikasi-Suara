@@ -1,0 +1,6 @@
+DATE = "11:04:22 January 21, 2025"
+QUARTUS_VERSION = "16.0.2"
+
+# Revisions
+
+PROJECT_REVISION = "Audio_Generate_DTMF"

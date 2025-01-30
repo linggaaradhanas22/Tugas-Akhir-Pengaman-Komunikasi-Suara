@@ -1,0 +1,153 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Source Code TA/HDL/GoertzelFilter_registeredV2/sim
+Egoertzel_calc
+Z0 w1733403215
+Z1 DPx4 ieee 17 fixed_float_types 0 22 JoVc:0L4XeXcaE?c:FVe62
+Z2 DPx4 ieee 17 fixed_generic_pkg 0 22 `=cI_4Mf07Y0RE[dTgE=F2
+Z3 DPx4 ieee 9 fixed_pkg 0 22 6nURH]dUY5@T6S0eLDXJe2
+Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dC:/Source Code TA/HDL/GoertzelFilter/sim
+Z8 8C:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc.vhd
+Z9 FC:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc.vhd
+l0
+L6
+VL?n<ZBWWOAV]aQ4S;9z@`3
+!s100 OATPM9`jT_BNhLlOm88O[2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1733405473
+!i10b 1
+Z12 !s108 1733405473.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc.vhd|
+Z14 !s107 C:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc.vhd|
+!i113 1
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+R4
+R5
+R6
+Z17 DEx4 work 13 goertzel_calc 0 22 L?n<ZBWWOAV]aQ4S;9z@`3
+l36
+L29
+Va^X>TjT:=ZY:42S`jK`TW2
+!s100 gCD`6UDERFA3Me3nY1^Ie3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Egoertzel_calc_tb
+Z18 w1733401720
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+Z19 8C:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc_tb.vhd
+Z20 FC:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc_tb.vhd
+l0
+L7
+VCCLRC5hdd<9J`R2Lj^A8g3
+!s100 ID4;Jf22cA8^`UUo1BL:43
+R10
+32
+Z21 !s110 1733402573
+!i10b 1
+Z22 !s108 1733402573.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc_tb.vhd|
+Z24 !s107 C:/Source Code TA/HDL/GoertzelFilter/sim/goertzel_calc_tb.vhd|
+!i113 1
+R15
+R16
+Asim
+Z25 DEx4 work 13 goertzel_calc 0 22 F=_O7S@SmzQ3C5PEAAJTH0
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 16 goertzel_calc_tb 0 22 CCLRC5hdd<9J`R2Lj^A8g3
+l25
+L10
+Vf2dgC_C6`TD34KY>4R>2a3
+!s100 Q]OFJ>@RmcH1W80TQb9Lz2
+R10
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R15
+R16
+Egoertzel_calc_tb_v2
+Z26 w1733402766
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+Z27 8C:\Source Code TA\HDL\GoertzelFilter\sim\goertzel_calc_tb_v2.vhd
+Z28 FC:\Source Code TA\HDL\GoertzelFilter\sim\goertzel_calc_tb_v2.vhd
+l0
+L7
+VlaOYV2D>Aee^OiQk`oOji1
+!s100 <NFRZ6jWk_;6OWf9F30^_3
+R10
+32
+Z29 !s110 1736265548
+!i10b 1
+Z30 !s108 1736265548.000000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Source Code TA\HDL\GoertzelFilter\sim\goertzel_calc_tb_v2.vhd|
+Z32 !s107 C:\Source Code TA\HDL\GoertzelFilter\sim\goertzel_calc_tb_v2.vhd|
+!i113 1
+R15
+R16
+Asim
+R17
+R1
+R2
+R3
+R4
+R5
+R6
+Z33 DEx4 work 19 goertzel_calc_tb_v2 0 22 laOYV2D>Aee^OiQk`oOji1
+l27
+L10
+Z34 VaUSI8QAnz07feQ:``Kg<`0
+Z35 !s100 2e]J40l<[=`2U^C^4o@KW2
+R10
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R15
+R16

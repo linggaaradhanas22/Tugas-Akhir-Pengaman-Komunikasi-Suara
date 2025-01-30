@@ -1,0 +1,39 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider TB
+add wave -noupdate /goertzel_697_tb/sample_clk
+add wave -noupdate -format Analog-Step -height 74 -max 32648.999999999996 -min -32723.0 /goertzel_697_tb/DUT/DTMF_sig
+add wave -noupdate -radix hexadecimal /goertzel_697_tb/DUT/Q0
+add wave -noupdate -radix hexadecimal /goertzel_697_tb/DUT/Q1
+add wave -noupdate -radix hexadecimal /goertzel_697_tb/DUT/Q2
+add wave -noupdate -divider -height 20 DUT
+add wave -noupdate /goertzel_697_tb/DUT/clk
+add wave -noupdate /goertzel_697_tb/DUT/rst
+add wave -noupdate /goertzel_697_tb/DUT/state
+add wave -noupdate /goertzel_697_tb/DUT/in_ready
+add wave -noupdate /goertzel_697_tb/DUT/in_valid
+add wave -noupdate /goertzel_697_tb/DUT/out_ready
+add wave -noupdate /goertzel_697_tb/DUT/out_valid
+add wave -noupdate /goertzel_697_tb/DUT/counter
+add wave -noupdate -format Analog-Step -height 74 -max 32648.999999999996 -min -32723.0 /goertzel_697_tb/DUT/DTMF_sampled
+add wave -noupdate -format Analog-Step -height 74 -max 17683.999999999996 -min -18460.0 -radix sfixed /goertzel_697_tb/DUT/Q2_reg
+add wave -noupdate -format Analog-Step -height 74 -max 17684.0 -min -18738.0 -radix sfixed /goertzel_697_tb/DUT/Q1_reg
+add wave -noupdate -format Analog-Step -height 74 -max 17684.0 -min -18738.0 -radix sfixed /goertzel_697_tb/DUT/Q0_reg
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {6347920 ns} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 150
+configure wave -valuecolwidth 142
+configure wave -justifyvalue left
+configure wave -signalnamewidth 1
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ms
+update
+WaveRestoreZoom {0 ns} {21144774 ns}

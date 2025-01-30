@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Jan 23 17:19:36 2025
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Scrambler_Receiver
+Top-level Entity Name : Scrambler_Receiver
+Family : Cyclone V
+Device : 5CSXFC6D6F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 6,080 / 41,910 ( 15 % )
+Total registers : 7271
+Total pins : 36 / 499 ( 7 % )
+Total virtual pins : 0
+Total block memory bits : 3,360 / 5,662,720 ( < 1 % )
+Total RAM Blocks : 8 / 553 ( 1 % )
+Total DSP Blocks : 32 / 112 ( 29 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 1 / 15 ( 7 % )
+Total DLLs : 0 / 4 ( 0 % )

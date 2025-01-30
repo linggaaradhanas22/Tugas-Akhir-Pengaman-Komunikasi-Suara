@@ -1,0 +1,118 @@
+Archive Project report for Scrambler_Sender
+Thu Jan 23 17:33:51 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Jan 23 17:33:51 2025 ;
+; Revision Name          ; Scrambler_Sender                      ;
+; Top-level Entity Name  ; Scrambler_Sender                      ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Source Code TA/HDL/Scramble_Sync_Sender/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Source Code TA/HDL/Scramble_Sync_Sender/quartus/Scrambler_Sender_v2.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'Scrambler_Sender.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Thu Jan 23 17:33:52 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++-------------------------------------------------------------------------+
+; Files Archived                                                          ;
++-------------------------------------------------------------------------+
+; File Name                                                               ;
++-------------------------------------------------------------------------+
+; ../hdl/Audio_interface.vhd                                              ;
+; ../hdl/Butterfly.v                                                      ;
+; ../hdl/DelayBuffer.v                                                    ;
+; ../hdl/FFT64.v                                                          ;
+; ../hdl/generate_dtmf_signed.vhd                                         ;
+; ../hdl/GenPermutateKey.v                                                ;
+; ../hdl/i2c.vhd                                                          ;
+; ../hdl/Multiply.v                                                       ;
+; ../hdl/ReverseBitOrder.v                                                ;
+; ../hdl/Scrambler.v                                                      ;
+; ../hdl/Scrambler_Sender.vhd                                             ;
+; ../hdl/ScramblerAudio.v                                                 ;
+; ../hdl/SdfUnit.v                                                        ;
+; ../hdl/sine_gen_signed.vhd                                              ;
+; ../hdl/Twiddle64.v                                                      ;
+; AudioPLL.cmp                                                            ;
+; AudioPLL.qip                                                            ;
+; AudioPLL.sip                                                            ;
+; AudioPLL.spd                                                            ;
+; AudioPLL.vhd                                                            ;
+; AudioPLL/AudioPLL_0002.qip                                              ;
+; AudioPLL/AudioPLL_0002.v                                                ;
+; AudioPLL_sim/AudioPLL.vho                                               ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Audio_interface.vhd      ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Butterfly.v              ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/DelayBuffer.v            ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/FFT64.v                  ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/generate_dtmf_signed.vhd ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/GenPermutateKey.v        ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/i2c.vhd                  ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Multiply.v               ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/ReverseBitOrder.v        ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Scrambler.v              ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Scrambler_Sender.vhd     ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/ScramblerAudio.v         ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/SdfUnit.v                ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/sine_gen_signed.vhd      ;
+; C:/Source Code TA/HDL/Scramble_Sync_Sender/hdl/Twiddle64.v              ;
+; Scrambler_Sender.qpf                                                    ;
+; Scrambler_Sender.qsf                                                    ;
+; Scrambler_Sender.SDC                                                    ;
+; Scrambler_Sender.sdc                                                    ;
+; Scrambler_Sender_assignment_defaults.qdf                                ;
++-------------------------------------------------------------------------+
+
+

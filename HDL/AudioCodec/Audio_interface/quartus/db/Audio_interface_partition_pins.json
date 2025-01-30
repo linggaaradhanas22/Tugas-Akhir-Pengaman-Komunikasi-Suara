@@ -1,0 +1,309 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "I2C_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Rin[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Lin[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Rdone",
+					"strict" : false
+				},
+				{
+					"name" : "Ldone",
+					"strict" : false
+				},
+				{
+					"name" : "I2C_SDAT",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Lout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCDAT",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

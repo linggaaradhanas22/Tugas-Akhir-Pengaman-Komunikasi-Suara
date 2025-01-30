@@ -1,0 +1,7 @@
+
+State Machine - |goertzel_calc_registered_v3_nonFixed|state_reg
+Name state_reg.compute state_reg.update state_reg.load state_reg.idle 
+state_reg.idle 0 0 0 0 
+state_reg.load 0 0 1 1 
+state_reg.update 0 1 0 1 
+state_reg.compute 1 0 0 1 

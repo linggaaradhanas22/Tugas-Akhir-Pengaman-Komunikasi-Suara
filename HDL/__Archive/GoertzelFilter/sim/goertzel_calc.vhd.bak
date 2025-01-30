@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.fixed_generic_pkg.all;
+
+entity goertzel_calc is
+
+	generic
+	(
+        COEFF_INT_BITS : integer := 1;
+        COEFF_FRAC_BITS : integer := 15;
+    
+        Q_INT_BITS : integer    := 11;
+        Q_FRAC_BITS : integer   := 5;
+    
+        X_INT_BITS  : integer   := 2;
+        X_FRAC_BITS : integer   := 14
+	);
+
+	port
+	(
+		-- Fixed-point format specifier: (sign).(integer).(fraction)
+		x_reg					: in sfixed((X_INT_BITS-1) downto -X_FRAC_BITS); -- Format: 1.1.14
+		coeff					: in sfixed((COEFF_INT_BITS-1) downto -COEFF_FRAC_BITS); -- Format: 1.1.14
+		Q1_reg, Q2_reg		: in sfixed(Q_INT_BITS-1 downto -Q_FRAC_BITS); -- Format: 1.10.5
+		Q0						: out sfixed(Q_INT_BITS-1 downto -Q_FRAC_BITS)
+	);
+
+end entity;
+
+architecture rtl of goertzel_calc is	
+
+	-- Intermediate signal to store the result of the combinational output
+	signal coeff_q1 : sfixed (11 downto -4); -- Format 1.11.19
+	signal x_min_q2 : sfixed (10 downto -5); -- Format 1.17.14
+	signal Q0_next	 : sfixed(Q_INT_BITS-1 downto -Q_FRAC_BITS);
+	
+begin	
+	-- Combinational logic part
+	coeff_q1 <= resize(coeff * Q1_reg, coeff_q1);
+	x_min_q2 <= resize(x_reg - Q2_reg, x_min_q2);
+	Q0_next <= resize(coeff_q1 + x_min_q2, Q0_next);
+	Q0 <= Q0_next;
+	
+	
+end rtl;

@@ -1,0 +1,49 @@
+Quartus Prime Archive log --	C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver_v2.qarlog
+
+Archive:	C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver_v2.qar
+Date:		Thu Jan 23 20:30:15 2025
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Audio_interface.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Butterfly.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/DelayBuffer.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/FFT64.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Framingv2.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/GenPermutateKey.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Multiply.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/ReverseBitOrder.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Scrambler.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/ScramblerAudio.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Scrambler_Receiver.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/SdfUnit.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/Twiddle64.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/dec_control.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/flaggingv2.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/i2c.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/lutcos_block.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/lutsin_block.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/markingv1.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/multv6.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/powercalcv1.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/slidingv5.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/hdl/toplevel_iq.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL.cmp
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL.qip
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL.sip
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL.spd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL.vhd
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL/AudioPLL_0002.qip
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL/AudioPLL_0002.v
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/AudioPLL_sim/AudioPLL.vho
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver.SDC
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver.qpf
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver.qsf
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver.sdc
+C:/Source Code TA/HDL/Scramble_Sync_Receiver/quartus/Scrambler_Receiver_assignment_defaults.qdf
+C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_float_types_c.vhd
+C:/intelFPGA_lite/18.1/modelsim_ase/vhdl_src/floatfixlib/fixed_pkg_c.vhd
+	======= Total: 38 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

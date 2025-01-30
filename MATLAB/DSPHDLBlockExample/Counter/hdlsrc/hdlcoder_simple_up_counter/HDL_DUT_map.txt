@@ -1,0 +1,1 @@
+hdlcoder_simple_up_counter/HDL_DUT --> HDL_DUT

@@ -1,0 +1,64 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity goertzel_calc is
+
+	generic
+	(
+		WIDTH : natural := 16
+	);
+
+	port
+	(
+		clk, ena, rst	: in std_logic;
+		-- Fixed-point format specifier: (sign).(integer).(fraction)
+		x_in			: in signed ((WIDTH-1) downto 0); -- Format: 1.1.14
+		coeff			: in signed ((WIDTH-1) downto 0); -- Format: 1.1.14
+		Q0, Q1, Q2		: out signed ((WIDTH-1) downto 0) -- Format: 1.10.5
+	);
+
+end entity;
+
+architecture rtl of goertzel_calc is
+	-- Three register chain registers
+	signal Q0_reg, Q1_reg, Q2_reg: signed ((WIDTH-1) downto 0);
+	
+	-- input register
+	signal x_reg : signed ((WIDTH-1) downto 0);
+
+	-- Intermediate signal to store the result of the combinational output
+	signal coeff_q1 : signed ((2*WIDTH-1) downto 0); -- Format 1.11.19
+	signal x_min_q2 : signed ((WIDTH) downto 0); -- Format 1.17.14
+	signal Q0_next  : signed ((WIDTH-1) downto 0); 	 -- Format 1.17.19 
+	
+begin	
+	-- Combinational logic part
+	coeff_q1 <= coeff * Q1_reg;
+	x_min_q2 <= (x_reg(15) & x_reg) - (Q2_reg(15) & Q2_reg);
+	Q0_next <= resize(coeff_q1 + x_min_q2, WIDTH);
+	
+	process (clk, rst)
+	begin
+		if rst = '1' then
+			Q0_reg <= (others => '0');
+			Q1_reg <= (others => '0');
+			Q2_reg <= (others => '0');
+			x_reg  <= (others => '0');
+		
+		elsif (rising_edge(clk)) then
+			if (ena = '1') then
+				x_reg <= x_in;
+				Q0_reg <= Q0_next;
+				Q1_reg <= Q0_reg;
+				Q2_reg <= Q1_reg;
+			end if;
+		end if;
+	end process;
+	
+	-- Assign output 
+	Q0 <= Q0_reg;
+	Q1 <= Q1_reg;
+	Q2	<=	Q2_reg;
+	
+end rtl;

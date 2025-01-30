@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Eaudio_tb
+Z0 w1737347386
+Z1 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z2 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 dC:/Source Code TA/HDL/AudioCodec/Audio_interface/sim
+Z7 8C:/Source Code TA/HDL/AudioCodec/Audio_interface/hdl/Audio_tb.vhd
+Z8 FC:/Source Code TA/HDL/AudioCodec/Audio_interface/hdl/Audio_tb.vhd
+l0
+L9
+V@mbE]L1]J9>7EYDkHY_WT3
+!s100 =@mR@B00=eSd;R3bzbKMO2
+Z9 OV;C;10.5b;63
+33
+Z10 !s110 1737347393
+!i10b 1
+Z11 !s108 1737347392.000000
+Z12 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Source Code TA/HDL/AudioCodec/Audio_interface/hdl/Audio_tb.vhd|
+Z13 !s107 C:/Source Code TA/HDL/AudioCodec/Audio_interface/hdl/Audio_tb.vhd|
+!i113 1
+Z14 o-work work -2008 -explicit
+Z15 tExplicit 1 CvgOpt 0
+Asim
+R1
+R2
+R3
+R4
+R5
+Z16 DEx4 work 8 audio_tb 0 22 @mbE]L1]J9>7EYDkHY_WT3
+l55
+L12
+V5Ek6g@mCQ5dOBWdL6cma>0
+!s100 iTa;JHR90ZB]:2jm_[Dgg3
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15

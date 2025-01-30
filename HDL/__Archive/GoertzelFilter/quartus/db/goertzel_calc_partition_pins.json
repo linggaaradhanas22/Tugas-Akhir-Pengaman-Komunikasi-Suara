@@ -1,0 +1,329 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q0[-5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[-4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[-3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[-2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[-1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Q0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-6]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-9]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-10]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-11]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-12]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-14]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-13]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-8]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-7]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[-5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[-5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[-4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[-3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[-2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[-1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Q1_reg[10]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-14]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-13]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-12]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-11]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-10]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-9]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-8]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-7]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-6]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-5]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-4]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-3]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-2]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[-1]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[0]",
+					"strict" : false
+				},
+				{
+					"name" : "coeff[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[-1]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[-2]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[-3]",
+					"strict" : false
+				},
+				{
+					"name" : "x_reg[-4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q2_reg[-4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
